@@ -1,8 +1,3 @@
-// let titulo = document.querySelector("h1");
-// titulo.innerHTML= "Jogo secreto";
-
-// let paragrafo = document.querySelector("p");
-// paragrafo.innerHTML = "escolha um numero entre 1 a 10";
 
 let numerosSorteados=[];
 let limite = 10;
@@ -31,6 +26,7 @@ function verificarChute() {
         ExibirTextoNaTela("h1","Parabens ^^");
         ExibirTextoNaTela("p","você acertou com "+tentativas+" "+resultado+"!");
         document.getElementById("reiniciar").removeAttribute("disabled");
+        document.getElementById("chutar").setAttribute("disabled",true);
     }
 
     else{
@@ -81,6 +77,7 @@ function novoJogo(){
     limparCampo();
     mensagemInicial();
     document.getElementById("reiniciar").setAttribute("disabled",true);
+    document.getElementById("chutar").removeAttribute("disabled");
     tentativas=1;
     
 }
